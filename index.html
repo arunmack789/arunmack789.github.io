@@ -3,48 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Arunkumar | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    header { background: #333; color: #fff; padding: 20px; text-align: center; }
-    section { padding: 20px; max-width: 800px; margin: auto; }
-    h1, h2 { color: #333; }
-    .card { background: #fff; padding: 15px; margin: 10px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #333; color: #fff; text-align: center; padding: 15px; margin-top: 20px; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f4f6f9; color: #333; }
+    header { background: linear-gradient(90deg, #1e3c72, #2a5298); color: #fff; padding: 50px 20px; text-align: center; }
+    header h1 { font-size: 2.8em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; color: #ddd; }
+    nav { background: #222; padding: 10px; text-align: center; position: sticky; top: 0; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #00b4d8; }
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    h2 { color: #1e3c72; border-bottom: 3px solid #00b4d8; display: inline-block; margin-bottom: 20px; }
+    .card { background: #fff; padding: 20px; margin: 15px 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .project-title { font-size: 1.3em; font-weight: bold; color: #0077b6; margin-bottom: 8px; }
+    .timeline { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+    footer { background: #222; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+    footer a { color: #00b4d8; text-decoration: none; }
+    .contact-links a { margin-right: 15px; font-weight: bold; color: #0077b6; }
+    .contact-links a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Hi, I'm John 👋</h1>
-    <p>AI/ML Engineer | DevOps Learner | Cloud Enthusiast</p>
+    <h1>Arunkumar 👋</h1>
+    <p>AI/ML Engineer | Computer Vision | NLP | Cloud & MLOps</p>
   </header>
 
-  <section>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
     <h2>About Me</h2>
     <div class="card">
-      <p>I am passionate about building AI/ML models, deploying them on AWS, and learning DevOps practices.</p>
+      <p>I am an AI/ML Engineer with hands-on experience in <b>Deep Learning, Computer Vision, and NLP</b>. 
+         Skilled in PyTorch, TensorFlow, and AWS, I have developed and deployed AI solutions across edge devices, mobile apps, and the cloud. 
+         Passionate about building real-world AI applications, optimizing ML pipelines, and applying MLOps practices for scalable deployments.</p>
     </div>
+  </section>
 
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <div class="project-title">AI Developer – Cricenter.ai</div>
+      <div class="timeline">2024 – 2025</div>
+      <p>Developed a <b>Sports Analytics Platform</b> for cricket using <b>TrackNet</b> and <b>PyTorchVideo</b>, 
+         enabling real-time ball tracking, match highlights detection, and automated CI/CD with AWS SageMaker & CodePipeline.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">AI Developer – Edsols Innovation</div>
+      <div class="timeline">2022 – 2024</div>
+      <p>Built AI solutions including <b>Face Mask Detection on Raspberry Pi with AWS</b>, 
+         <b>Traffic Sign Detection on Jetson Nano</b>, and <b>6-Axis Robotic Arm Kinematics</b> for automation projects.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">ML Engineer Intern – Optisol Business</div>
+      <div class="timeline">2021 – 2022</div>
+      <p>Worked on <b>Bitumen Truck Analysis</b> and <b>Shoplifting Behavior Detection</b> using YOLOv4/YOLOv5 with DeepSORT for tracking and analysis.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">ML Trainee – Appasamy Associate</div>
+      <div class="timeline">2020</div>
+      <p>Developed a <b>Retina Eye Segmentation</b> pipeline using CNN models to detect and delineate retinal layers.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
     <h2>Projects</h2>
     <div class="card">
-      <h3>Cricket Umpire Signal Classifier</h3>
-      <p>A deep learning project that classifies cricket umpire signals ('wide', 'no ball', 'six').</p>
+      <div class="project-title">📄 Document Q&A with Gemini + LangChain</div>
+      <p>Streamlit-based app for Q&A on PDFs using <b>Gemini LLM + RAG + FAISS</b>. 
+         <a href="https://github.com/arunmack789/Basic-Rag-for-Q-A-document" target="_blank">GitHub</a></p>
     </div>
     <div class="card">
-      <h3>TrackNetV3</h3>
-      <p>Implemented ball tracking in cricket videos using CNN-LSTM models.</p>
+      <div class="project-title">🤖 Android Chatbot with Gemma LLM</div>
+      <p>Deployed <b>Gemma 3B LLM</b> as a chatbot on Android (TFLite, MediaPipe), achieving low-latency edge inference. 
+         <a href="https://shorturl.at/0D7GI" target="_blank">Demo Video</a></p>
     </div>
+    <div class="card">
+      <div class="project-title">⚡ Sports Analytics – Ball Tracking & Highlights</div>
+      <p>Real-time cricket analytics using <b>TrackNet + PyTorchVideo</b>, deployed on AWS SageMaker.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">🛒 Shoplifting Behavior Detection</div>
+      <p>YOLOv5 + DeepSORT pipeline to detect bags & trolleys in retail, achieving 89% accuracy.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">🚦 Traffic Sign Detection (Jetson Nano)</div>
+      <p>SSD MobileNet-based detection deployed on Jetson Nano with live video inference.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">🤝 Face Mask Detection with Temperature Monitoring</div>
+      <p>IoT + Cloud system deployed on Raspberry Pi with <b>AWS Lambda + RDS</b>.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">📦 Barcode & QR Code Recognition</div>
+      <p>Lightweight NanoDet + ONNX model for robust barcode recognition in invoices.</p>
+    </div>
+    <div class="card">
+      <div class="project-title">🦾 6-Axis Robotic Arm Kinematics</div>
+      <p>Forward & inverse kinematics for robotic arm control with Python and Sympy.</p>
+    </div>
+  </section>
 
+  <!-- Contact -->
+  <section id="contact">
     <h2>Contact</h2>
-    <div class="card">
-      <p>Email: yourname@example.com</p>
-      <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+    <div class="card contact-links">
+      <p>Email: <a href="mailto:arunkumar97info@gmail.com">arunkumar97info@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/arunmack789" target="_blank">github.com/arunmack789</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/your-link" target="_blank">linkedin.com/in/your-link</a></p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 John | Built with ❤️ and GitHub Pages</p>
+    <p>© 2025 Arunkumar | Built with ❤️ using HTML & GitHub Pages</p>
   </footer>
+
 </body>
 </html>
